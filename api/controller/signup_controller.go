@@ -83,6 +83,7 @@ func (sc *SignupController) Signup(c *gin.Context) {
 	signupResponse := domain.SignupResponse{
 		AccessToken:  accessToken,
 		RefreshToken: refreshToken,
+		STATUS:       200,
 	}
 
 	c.JSON(http.StatusOK, signupResponse)
